@@ -1,31 +1,33 @@
 # Pourquoi ce document ?
 
-Pour simplifier l'accès aux fichiers des machines physiques sous Windows et Debian :  je fais ce document pour avoir accès à leurs fichiers sous vos machines Windows et Linux n'importe où sur un poste de l'IUT ou chez vous.
-
-Plus besoin de clé USB pour transférer des fichiers entre vos machines physiques sous Windows et Debian; non plus pour amener vos fichiers pour travailler chez vous après explications.
-
-A l'issue de ce documents si vous le souhaitez, vos fichiers seront accessibles sur toutes vos machines à l'IUT sous Windows ou Debian et chez vous.
+J'ai créé ce document pour montrer qu'il est possible de travailler sur une machine Debian à l'IUT, de modifier ce travail sur une machine Windows de l'IUT et de continuer de travailler depuis chez soit sur son ordi.
 
 ## Rappel sur le stockage des machines physiques
 Les machines physiques sont montées avec un dual-boot Debian/Windows en réseau. 
 
-Les sessions Debian sont synchronisées entre les machines physiques via leur `/home`. *Si vous ouvrez une session Debian sur une machine physique et que vous téléchargez ou éditez des fichiers : ces changements seront accessibles sur n'importe quelle session Debian à l'IUT avec vos identifiants.*
+Les sessions Debian sont synchronisées entre les machines physiques via leur `/home`. *Si une session Debian sur une machine physique télécharge ou édite des fichiers : ces changements sont visibles sur toute session Debian à l'IUT avec les mêmes identifiants.*
 
-**Les sessions Windows ne sont pas synchronisées entre les machines physiques les modifications seront appliquées sur la machine physique seule**. Je vous recommande franchement de ne pas utiliser les répertoires initiaux de Windows (Téléchargements, Documents, Vidéos...) *voir image ci-dessous*.
+**L'état des sessions Windows n'est pas conservé entre les machines physiques, les modifications sont appliquées sur la machine physique de la Windows seule**. Les dossiers encadrés ci-dessous ne sont accessibles que par la machine avec Windows sur laquelle vous étiez au moment des modifications. *voir image ci-dessous*.
 
-Pour éditer et retrouver vos fichiers d'une session Windows sur d'autres machines physiques Windows, un lecteur réseau est attaché au démarrage sur les sessions Windows. Celui-ci pointe vers le serveur de stockage sur lequel votre session Debian récupère son `/home`. *voir image ci-dessous*
+Pour éditer et retrouver des fichiers d'une session Windows à une autre, un lecteur réseau attaché peut être utilisé. Celui-ci pointe vers le serveur de stockage sur lequel votre session Debian récupère son `/home`. *voir image ci-dessous*
 
-Pour faire un grand raccourci : **sur Windows vous avez un disque réseau attaché contenant les fichiers de votre session Debian; vous pouvez l'utiliser pour stocker et éditer vos fichiers quand vous serez aussi sur Windows. Vous aurez donc accès à vos fichiers sur vos machines Debian et Windows sur n'importe quelle machine physique peu importe son OS**. *(ça peut aussi permettre de transférer ses fichiers super facilement vos sessions Windows à Debian, sans clé USB)*
+Grand raccourci : **sur Windows un disque réseau est attaché contenant les fichiers de votre session Debian; l'utiliser pour stocker et éditer des fichiers sur votre Windows et les stocker directement sur votre Debian me semble intéressant..**
 
 
 ## Accès à vos fichiers à distance
 
+L'installation peut se faire manuellement vu ci-dessous ou par les scripts présents dans ce dépôt.
 
-### Utilisation du VPN de l'IUT
-#### Sur Windows
-#### Sur GNU/Linux (ex. Ubuntu)
+### Sur Windows
+Téléchargez le fichier de configuration OpenVPN de l'IUT (https://vpn.univ-pau.fr/uppa_etudiant_v1.ovpn).
 
-### Accès au serveur de fichiers
-#### Sur Windows
-#### Sur GNU/Linux (ex. Ubuntu)
-a
+Téléchargez et installez le fichier d'installation en `.msi` de OpenVPN (https://openvpn.net/community-downloads/).
+
+Lancez OpenVPN depuis votre Menu Démarrer, une icône sur le bureau, la barre de recherche.. Il apparait en bas à droite de votre barre des tâches, peut-être dans la zone de notification. *mettre image de moi windows openvpn dans barre des tâches*
+
+*Clique droit -> Importer* avec votre fichier de configuration téléchargé puis *Connexion*. <br> Si réouverture : *Clique droit -> Connection*
+
+mettre ajouter un lecteur réseau ici + explications
+
+
+### Sur GNU/Linux (ex. Ubuntu)
