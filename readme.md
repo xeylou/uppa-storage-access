@@ -29,5 +29,8 @@ Lancez OpenVPN depuis votre Menu Démarrer, une icône sur le bureau, la barre d
 
 mettre ajouter un lecteur réseau ici + explications
 
+`\\mdm-stock`
+identifiant@uppa.univ-pau.fr
+pw
 
 ### Sur GNU/Linux (ex. Ubuntu)
